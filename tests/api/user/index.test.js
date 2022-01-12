@@ -3,7 +3,7 @@ import http from "http";
 import { apiResolver } from "next/dist/server/api-utils";
 import supertest from "supertest";
 
-import userHandler from "../../pages/api/user";
+import userHandler from "../../../pages/api/user";
 
 let server;
 
