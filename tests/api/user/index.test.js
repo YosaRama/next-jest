@@ -37,7 +37,7 @@ describe("User[GET]", () => {
 });
 
 describe("User[POST]", () => {
-  const body = {
+  let body = {
     name: "John Doe",
     email: "johndoe@example.com",
   };
@@ -50,5 +50,13 @@ describe("User[POST]", () => {
   test("should return true success", async () => {
     const result = await supertest(server).post("/api/user").send(body);
     expect(result.body.success).toBeTruthy();
+  });
+
+  test("should return false success when not send email on body", async () => {
+    body = {
+      name: "John Doe",
+    };
+    const result = await supertest(server).post("/api/user").send(body);
+    expect(result.body.success).not.toBeTruthy();
   });
 });
