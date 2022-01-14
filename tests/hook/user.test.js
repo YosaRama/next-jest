@@ -8,13 +8,13 @@ describe("User Hook", () => {
     email: "putu@gmail.com",
   };
 
-  test("should return data", async () => {
-    const { result, rerender, waitFor, waitForNextUpdate } = renderHook(() =>
-      useUsers({ queryString: "" })
-    );
+  //   test("should return data", async () => {
+  //     const { result, rerender, waitFor, waitForNextUpdate } = renderHook(() =>
+  //       useUsers({ queryString: "" })
+  //     );
+  //     console.log(result.current);
+  //     expect();
+  //   });
 
-    console.log(result.current);
-
-    expect();
-  });
+  test("should ", () => {});
 });

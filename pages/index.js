@@ -2,6 +2,7 @@
 import { useUsers } from "hook/user";
 
 import { GET_USERS } from "db/query/user";
+import CustomButton from "components/button";
 
 function Homepage(props) {
   const { data, onAdd } = useUsers({ queryString: "" });
@@ -24,6 +25,7 @@ function Homepage(props) {
         ))}
         <button onClick={handleSubmit}>Click Here!</button>
       </div>
+      <CustomButton>This is Custom Button</CustomButton>
     </>
   );
 }
